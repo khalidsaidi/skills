@@ -62,7 +62,7 @@ Read relevant lead/account context and sources behind AI research. Draft around 
 
 Select the correct inbox/message type and inspect recipient eligibility, credits, attachment rules and response state. Distinguish invitations, first-degree messages, Open Profile messages and paid InMail. Do not promise bulk InMail, unrestricted invitations or native lead/account CSV export.
 
-Sending messages, invitations or introduction requests requires explicit user instruction covering that action. Existing authorization persists; do not ask again for the same scope. Prepare drafts, research and organize authorized lists autonomously. Review generated text and destination before sending, then verify the actual sent state.
+Sending messages, invitations or introduction requests requires explicit user approval of the recipients and text. Approval covers only that batch; get it again for any later send. Prepare drafts, research and organize authorized lists autonomously. Review generated text and destination before sending, then verify the actual sent state.
 
 For Smart Links, inspect access behavior, sharing and analytics identity limits. A content view is engagement, not proof of purchase or approval. Separate saved-search emails, in-app alerts, mobile push and Teams delivery.
 
