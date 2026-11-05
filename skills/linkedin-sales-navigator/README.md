@@ -28,7 +28,7 @@ npx skills add khalidsaidi/skills --skill linkedin-sales-navigator
 ## What it runs and sends
 
 - **Script:** `scripts/find_reference.py` searches the bundled notes. It only reads files in this folder and makes no network requests.
-- **Data:** the skill collects and sends nothing itself. See [PRIVACY.md](PRIVACY.md).
+- **Data:** the skill sends nothing itself. Its prospecting workflow can have your agent record prospects' names, roles and related evidence in a workbook wherever it saves its work. See [PRIVACY.md](PRIVACY.md).
 - **LinkedIn account:** the skill doesn't include a browser or LinkedIn connection. If your agent already has access to your account, the skill guides how it works there. It requires your approval of the recipients and text for each batch of messages, invitations or introduction requests.
 - **External links:** the notes link to LinkedIn and vendor documentation. They're reference material, and the agent may open them to check current details if it has web access.
 
