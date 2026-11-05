@@ -1,0 +1,14 @@
+interface:
+  display_name: LinkedIn Sales Navigator
+  short_description: Sales Navigator prospecting, admin and integrations
+  default_prompt: Use $linkedin-sales-navigator to help me prospect, manage my account,
+    or configure an integration using official documentation.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,6 +1,6 @@
 # Skills
 
-25 agent skills for everyday development: code review, debugging, testing, Git, releases, React and Terraform.
+26 agent skills: code review, debugging, testing, Git, releases, React, Terraform and LinkedIn Sales Navigator.
 
 Each skill is a folder in [`skills/`](skills) with a `SKILL.md` file and, for automation skills, a `scripts/` folder.
 
@@ -30,7 +30,7 @@ skill run node-doctor
 
 ## Knowledge skills
 
-Guidance only. These don't include scripts.
+Guidance only. These don't run anything in your project, though `linkedin-sales-navigator` includes a small script for searching its notes.
 
 | Skill | Covers |
 | --- | --- |
@@ -39,6 +39,7 @@ Guidance only. These don't include scripts.
 | [`deployment-checklist`](skills/deployment-checklist) | What to check before a release |
 | [`docs-styleguide`](skills/docs-styleguide) | Documentation style and structure |
 | [`git-commit-style`](skills/git-commit-style) | Conventional commit messages |
+| [`linkedin-sales-navigator`](skills/linkedin-sales-navigator) | Prospecting, messaging, CRM, admin and billing in Sales Navigator, from paraphrased notes on its help docs |
 | [`pr-description-style`](skills/pr-description-style) | Pull request descriptions |
 | [`react-patterns`](skills/react-patterns) | React best practices |
 | [`release-notes-style`](skills/release-notes-style) | Writing release notes |
@@ -76,3 +77,5 @@ If something a skill needs is missing, such as a test script or a lockfile, it s
 ## License
 
 [MIT](LICENSE)
+
+`linkedin-sales-navigator` is independent and isn't affiliated with or endorsed by LinkedIn. LinkedIn and Sales Navigator are trademarks of LinkedIn Corporation.
