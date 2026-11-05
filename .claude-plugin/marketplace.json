@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "knowledge-skills",
-      "description": "Checklists and guides for code review, debugging, testing, Git, releases, React and Terraform",
+      "description": "Checklists and guides for code review, debugging, testing, Git, releases, React, Terraform and LinkedIn Sales Navigator",
       "source": "./",
       "strict": false,
       "skills": [
@@ -17,6 +17,7 @@
         "./skills/deployment-checklist",
         "./skills/docs-styleguide",
         "./skills/git-commit-style",
+        "./skills/linkedin-sales-navigator",
         "./skills/pr-description-style",
         "./skills/react-patterns",
         "./skills/release-notes-style",
