@@ -1,7 +1,7 @@
 ---
 name: dependency-security-fix
-description: Fix high/critical vulns via safe bump; run tests; revert on failure
-version: "1.0.0"
+description: Apply non-breaking audit fixes; run tests; revert on failure
+version: "1.1.0"
 tags: [security, dependencies]
 kind: automation
 risk: moderate
@@ -16,4 +16,4 @@ scripts:
 
 # dependency-security-fix
 
-Attempts to fix high/critical vulnerabilities with npm audit fix (or pnpm). Runs tests; reverts on failure.
+Runs audit fix (non-breaking fixes only), then your tests. Reverts package files if tests fail. Needs a test script and an npm or pnpm lockfile.

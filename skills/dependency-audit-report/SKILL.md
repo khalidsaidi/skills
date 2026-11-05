@@ -1,7 +1,7 @@
 ---
 name: dependency-audit-report
-description: Run npm/pnpm audit and write human report to artifacts (no repo edits)
-version: "1.0.0"
+description: Run pnpm, npm or yarn audit and report the results (no repo edits)
+version: "1.1.0"
 tags: [security, audit, dependencies]
 kind: automation
 risk: low
@@ -15,4 +15,4 @@ scripts:
 
 # dependency-audit-report
 
-Runs npm audit or pnpm audit and writes a human-readable report to run artifacts. No changes to repo.
+Runs your package manager's audit. Fails if the audit finds vulnerabilities. No changes to the repo.

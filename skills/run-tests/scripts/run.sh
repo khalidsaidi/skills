@@ -1,20 +1,12 @@
 #!/usr/bin/env bash
-set -e
-if [[ ! -f package.json ]]; then
-  echo "Bootstrapping package.json for tests."
-  npm init -y >/dev/null 2>&1 || true
+set -euo pipefail
+bash "$(dirname "$0")/check.sh"
+script=$(node -p 'JSON.parse(require("fs").readFileSync("package.json","utf8")).scripts?.test ?? ""')
+if [[ -n "$script" && "$script" != *"no test specified"* ]]; then
+  if [[ -f pnpm-lock.yaml ]]; then pm=pnpm; elif [[ -f yarn.lock ]]; then pm=yarn; else pm=npm; fi
+  exec "$pm" test
 fi
-
-node - <<'NODE'
-const fs = require('fs');
-const path = 'package.json';
-const pkg = JSON.parse(fs.readFileSync(path, 'utf8'));
-pkg.scripts = pkg.scripts || {};
-const testScript = String(pkg.scripts.test || '').trim();
-if (!testScript || testScript === 'echo "Error: no test specified" && exit 1') {
-  pkg.scripts.test = "echo Tests completed";
-}
-fs.writeFileSync(path, JSON.stringify(pkg, null, 2) + '\n');
-NODE
-
-pnpm test 2>/dev/null || npm test 2>/dev/null || pnpm exec vitest run --passWithNoTests 2>/dev/null || npx vitest run --passWithNoTests 2>/dev/null || npx jest --passWithNoTests 2>/dev/null || echo "Test toolchain unavailable"
+if [[ -x node_modules/.bin/vitest ]]; then
+  exec node_modules/.bin/vitest run
+fi
+exec node_modules/.bin/jest

@@ -1,7 +1,7 @@
 ---
 name: run-typecheck
 description: Run tsc --noEmit if tsconfig present
-version: "1.0.0"
+version: "1.1.0"
 tags: [typescript, typecheck]
 kind: automation
 risk: low
@@ -14,4 +14,4 @@ scripts:
 
 # run-typecheck
 
-Runs TypeScript type check (tsc --noEmit) if tsconfig present.
+Runs TypeScript type check (tsc --noEmit). Fails if tsconfig.json or a local TypeScript install is missing.

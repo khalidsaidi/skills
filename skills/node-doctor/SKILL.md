@@ -1,7 +1,7 @@
 ---
 name: node-doctor
 description: Detect Node/pnpm/npm/yarn, package.json, git, lockfile; print recommended commands and report
-version: "1.0.0"
+version: "1.1.0"
 tags: [node, tooling, diagnostics]
 kind: automation
 risk: low
