@@ -1,7 +1,7 @@
 ---
 name: run-build
 description: Run build script
-version: "1.0.0"
+version: "1.1.0"
 tags: [build]
 kind: automation
 risk: low
@@ -14,4 +14,4 @@ scripts:
 
 # run-build
 
-Runs the project's build script.
+Runs the project's build script. Fails if there isn't one.

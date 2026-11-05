@@ -1,7 +1,7 @@
 ---
 name: git-status-report
 description: Print repo status, changed files, suggested branch name
-version: "1.0.0"
+version: "1.1.0"
 tags: [git]
 kind: automation
 risk: low
@@ -14,4 +14,4 @@ scripts:
 
 # git-status-report
 
-Prints git status, changed files, and a suggested branch name. Read-only.
+Prints git status, changed files, and a suggested branch name. Read-only. Fails outside a Git repository.

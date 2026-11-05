@@ -1,7 +1,7 @@
 ---
 name: changelog-from-commits
 description: Generate CHANGELOG snippet from git log since last tag; write to artifacts
-version: "1.0.0"
+version: "1.1.0"
 tags: [changelog, git]
 kind: automation
 risk: low

@@ -1,28 +1,38 @@
 #!/usr/bin/env bash
-set -e
-if [[ ! -f package.json ]]; then
-  echo "Bootstrapping package.json for dependency security fix."
-  npm init -y >/dev/null 2>&1 || true
-fi
+set -euo pipefail
+bash "$(dirname "$0")/check.sh"
+if [[ -f pnpm-lock.yaml ]]; then pm=pnpm; else pm=npm; fi
 
-if [[ ! -d .git ]]; then
-  echo "Bootstrapping git repository for dependency security fix."
-  git init >/dev/null 2>&1 || true
-fi
+backup=$(mktemp -d)
+trap 'rm -f "$backup"/*; rmdir "$backup"' EXIT
+files=(package.json pnpm-lock.yaml package-lock.json)
+for f in "${files[@]}"; do
+  if [[ -f "$f" ]]; then cp "$f" "$backup/$f"; fi
+done
 
-node - <<'NODE'
-const fs = require('fs');
-const path = 'package.json';
-if (!fs.existsSync(path)) process.exit(0);
-const pkg = JSON.parse(fs.readFileSync(path, 'utf8'));
-pkg.scripts = pkg.scripts || {};
-const testScript = String(pkg.scripts.test || '').trim();
-if (!testScript || testScript === 'echo "Error: no test specified" && exit 1') {
-  pkg.scripts.test = "echo Tests completed";
+revert() {
+  for f in "${files[@]}"; do
+    if [[ -f "$backup/$f" ]]; then cp "$backup/$f" "$f"; fi
+  done
+  "$pm" install || echo "Restored package files, but reinstalling failed. Run $pm install." >&2
 }
-fs.writeFileSync(path, JSON.stringify(pkg, null, 2) + '\n');
-NODE
 
-npm install --package-lock-only --ignore-scripts >/dev/null 2>&1 || true
-pnpm audit fix 2>/dev/null || npm audit fix 2>/dev/null || echo "Audit fix not available"
-pnpm test 2>/dev/null || npm test 2>/dev/null || true
+fix_status=0
+"$pm" audit fix || fix_status=$?
+if [[ "$pm" == pnpm ]] && ! pnpm install; then
+  revert
+  echo "dependency-security-fix: install failed after the fix; changes were reverted." >&2
+  exit 1
+fi
+
+if ! "$pm" test; then
+  revert
+  echo "dependency-security-fix: tests failed after the fix; changes were reverted." >&2
+  exit 1
+fi
+
+if [[ "$fix_status" -ne 0 ]]; then
+  echo "dependency-security-fix: tests pass and any changes were kept, but audit fix exited with $fix_status. Vulnerabilities may remain; run $pm audit." >&2
+  exit 1
+fi
+echo "Audit fix applied and tests pass."

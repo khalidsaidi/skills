@@ -1,28 +1,43 @@
 #!/usr/bin/env bash
-set -e
-if [[ ! -f package.json ]]; then
-  echo "Bootstrapping package.json for React maintenance."
-  npm init -y >/dev/null 2>&1 || true
-fi
+set -euo pipefail
+bash "$(dirname "$0")/check.sh"
+if [[ -f pnpm-lock.yaml ]]; then pm=pnpm; elif [[ -f yarn.lock ]]; then pm=yarn; else pm=npm; fi
 
-if ! grep -q '"react"' package.json; then
-  echo "Installing React baseline dependencies."
-  pnpm add react react-dom 2>/dev/null || npm i react react-dom 2>/dev/null || true
-fi
-
-node - <<'NODE'
-const fs = require('fs');
-const path = 'package.json';
-const pkg = JSON.parse(fs.readFileSync(path, 'utf8'));
-pkg.scripts = pkg.scripts || {};
-const testScript = String(pkg.scripts.test || '').trim();
-if (!pkg.scripts.build) pkg.scripts.build = "echo Build completed";
-if (!testScript || testScript === 'echo "Error: no test specified" && exit 1') {
-  pkg.scripts.test = "echo Tests completed";
+script_of() {
+  node -p 'JSON.parse(require("fs").readFileSync("package.json","utf8")).scripts?.[process.argv[1]] ?? ""' "$1"
 }
-fs.writeFileSync(path, JSON.stringify(pkg, null, 2) + '\n');
-NODE
+packages=(react)
+if [[ -n "$(node -p 'const p=JSON.parse(require("fs").readFileSync("package.json","utf8"));(p.dependencies?.["react-dom"]||p.devDependencies?.["react-dom"])??""')" ]]; then
+  packages+=(react-dom)
+fi
 
-pnpm update react react-dom 2>/dev/null || npm update react react-dom 2>/dev/null
-pnpm run build 2>/dev/null || npm run build 2>/dev/null || true
-pnpm test 2>/dev/null || npm test 2>/dev/null || true
+backup=$(mktemp -d)
+trap 'rm -f "$backup"/*; rmdir "$backup"' EXIT
+files=(package.json pnpm-lock.yaml package-lock.json yarn.lock)
+for f in "${files[@]}"; do
+  if [[ -f "$f" ]]; then cp "$f" "$backup/$f"; fi
+done
+
+revert_and_exit() {
+  for f in "${files[@]}"; do
+    if [[ -f "$backup/$f" ]]; then cp "$backup/$f" "$f"; fi
+  done
+  "$pm" install || echo "Restored package files, but reinstalling failed. Run $pm install." >&2
+  echo "react-maintenance-upgrade: $1; the upgrade was reverted." >&2
+  exit 1
+}
+
+if [[ "$pm" == yarn ]]; then
+  yarn upgrade "${packages[@]}" || revert_and_exit "the update failed"
+else
+  "$pm" update "${packages[@]}" || revert_and_exit "the update failed"
+fi
+
+if [[ -n "$(script_of build)" ]]; then
+  "$pm" run build || revert_and_exit "the build failed"
+fi
+test_script=$(script_of test)
+if [[ -n "$test_script" && "$test_script" != *"no test specified"* ]]; then
+  "$pm" test || revert_and_exit "tests failed"
+fi
+echo "React updated within your version ranges; checks pass."

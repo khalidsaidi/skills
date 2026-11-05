@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-set -e
-if [[ ! -f package.json ]]; then
-  echo "Bootstrapping package.json for dependency audit."
-  npm init -y >/dev/null 2>&1 || true
-fi
-
-npm install --package-lock-only --ignore-scripts >/dev/null 2>&1 || true
-pnpm audit 2>/dev/null || npm audit 2>/dev/null || echo "Audit not available"
+set -euo pipefail
+bash "$(dirname "$0")/check.sh"
+if [[ -f pnpm-lock.yaml ]]; then pm=pnpm; elif [[ -f yarn.lock ]]; then pm=yarn; else pm=npm; fi
+exec "$pm" audit

@@ -50,18 +50,17 @@ Guidance only. These don't include scripts.
 
 These include `check.sh` and `run.sh` scripts, which run in your project.
 
-> [!WARNING]
-> Read a skill's scripts before you run it, and start from a clean Git tree. Many of them change your project when something is missing: they can create `package.json`, `tsconfig.json` or a Git repo, add placeholder `build`, `lint` and `test` scripts that only print a message, and install dependencies. A passing result from one of these placeholders doesn't mean anything was built, linted or tested.
+If something a skill needs is missing, such as a test script or a lockfile, it says so and fails. Skills that change your project say so in their `SKILL.md`, and the two upgrade skills revert their changes if your checks fail.
 
 | Skill | Does |
 | --- | --- |
 | [`changelog-from-commits`](skills/changelog-from-commits) | Lists commits since the last tag |
 | [`dependency-audit-report`](skills/dependency-audit-report) | Runs `pnpm audit` or `npm audit` |
-| [`dependency-security-fix`](skills/dependency-security-fix) | Runs `audit fix`, then your tests |
+| [`dependency-security-fix`](skills/dependency-security-fix) | Runs `audit fix`, then your tests, and reverts if they fail |
 | [`git-status-report`](skills/git-status-report) | Prints status, changed files and a suggested branch name |
 | [`node-doctor`](skills/node-doctor) | Prints Node, package manager and Git versions |
-| [`react-maintenance-upgrade`](skills/react-maintenance-upgrade) | Updates React, then runs build and tests |
-| [`repo-bootstrap`](skills/repo-bootstrap) | Adds ESLint, Prettier, Husky, lint-staged and a CI workflow on a new branch |
+| [`react-maintenance-upgrade`](skills/react-maintenance-upgrade) | Updates React, runs build and tests, and reverts if they fail |
+| [`repo-bootstrap`](skills/repo-bootstrap) | Adds ESLint, Prettier, Husky and lint-staged on a new branch |
 | [`run-build`](skills/run-build) | Runs the build script |
 | [`run-format`](skills/run-format) | Runs Prettier |
 | [`run-lint`](skills/run-lint) | Runs the lint script |
