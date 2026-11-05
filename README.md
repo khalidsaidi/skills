@@ -24,7 +24,7 @@ With [SkillRunner](https://github.com/khalidsaidi/skillrunner):
 
 ```bash
 npm i -g @khalidsaidi/skillrunner
-skill install node-doctor
+skill install khalidsaidi/skills/skills/node-doctor
 skill run node-doctor
 ```
 
