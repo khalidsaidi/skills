@@ -21,6 +21,13 @@ In Claude Code:
 /plugin install linkedin-sales-navigator@khalidsaidi-skills
 ```
 
+In Codex:
+
+```bash
+codex plugin marketplace add khalidsaidi/skills
+codex plugin add khalidsaidi-skills@khalidsaidi-skills
+```
+
 With [SkillRunner](https://github.com/khalidsaidi/skillrunner):
 
 ```bash
