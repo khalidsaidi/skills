@@ -1,0 +1,51 @@
+{
+  "name": "khalidsaidi-skills",
+  "owner": {
+    "name": "Khalid Saidi",
+    "url": "https://github.com/khalidsaidi"
+  },
+  "description": "Agent skills for everyday development",
+  "plugins": [
+    {
+      "name": "knowledge-skills",
+      "description": "Checklists and guides for code review, debugging, testing, Git, releases, React and Terraform",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/code-review-checklist",
+        "./skills/debugging-playbook",
+        "./skills/deployment-checklist",
+        "./skills/docs-styleguide",
+        "./skills/git-commit-style",
+        "./skills/pr-description-style",
+        "./skills/react-patterns",
+        "./skills/release-notes-style",
+        "./skills/security-hygiene",
+        "./skills/terraform-structure",
+        "./skills/testing-playbook"
+      ]
+    },
+    {
+      "name": "automation-skills",
+      "description": "Scripts that run builds, tests, linting, audits and Terraform checks in your project. Read them first: they can change your project.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/changelog-from-commits",
+        "./skills/dependency-audit-report",
+        "./skills/dependency-security-fix",
+        "./skills/git-status-report",
+        "./skills/node-doctor",
+        "./skills/react-maintenance-upgrade",
+        "./skills/repo-bootstrap",
+        "./skills/run-build",
+        "./skills/run-format",
+        "./skills/run-lint",
+        "./skills/run-tests",
+        "./skills/run-typecheck",
+        "./skills/terraform-drift-audit",
+        "./skills/terraform-fmt-validate"
+      ]
+    }
+  ]
+}
