@@ -1,0 +1,16 @@
+{
+  "name": "linkedin-sales-navigator-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "notes": "node scripts/build-notes.mjs",
+    "test": "node scripts/build-notes.mjs && node --test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "zod": "^3.25.0"
+  }
+}
