@@ -1,0 +1,23 @@
+{
+  "name": "khalidsaidi-skills",
+  "version": "1.0.0",
+  "description": "26 agent skills for code review, debugging, testing, Git, releases, React, Terraform and LinkedIn Sales Navigator.",
+  "author": {
+    "name": "Khalid Saidi",
+    "url": "https://github.com/khalidsaidi"
+  },
+  "homepage": "https://github.com/khalidsaidi/skills",
+  "repository": "https://github.com/khalidsaidi/skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Khalid Saidi Skills",
+    "shortDescription": "26 skills for everyday work",
+    "longDescription": "Agent skills for code review, debugging, testing, Git, releases, React, Terraform and LinkedIn Sales Navigator. The LinkedIn skill is independent and isn't affiliated with or endorsed by LinkedIn.",
+    "developerName": "Khalid Saidi",
+    "category": "Productivity",
+    "capabilities": [],
+    "composerIcon": "./skills/linkedin-sales-navigator/assets/icon.svg",
+    "logo": "./skills/linkedin-sales-navigator/assets/icon.svg"
+  }
+}
