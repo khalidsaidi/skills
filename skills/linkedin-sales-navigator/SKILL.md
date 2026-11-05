@@ -1,11 +1,19 @@
 ---
 name: linkedin-sales-navigator
-description: Use and explain LinkedIn Sales Navigator from official documentation. Covers account and lead search, Boolean filters, personas, lists, alerts, buyer intent, Account IQ, Lead IQ, relationship maps, TeamLink, InMail, Smart Links, mobile, CRM integrations, Microsoft Teams, reporting, licenses, SSO, SCIM, billing, transfers, privacy and troubleshooting. Use for prospecting, account reviews, feature questions, onboarding, administration or implementation work in Sales Navigator, independent of any particular business or product.
+description: Find, compare and qualify prospects using LinkedIn Sales Navigator, and explain or operate its documented features. Use for best-match prospect discovery, buyer research, account planning, outreach preparation, feature questions, onboarding, CRM integrations, administration, billing and troubleshooting. Covers Boolean search, personas, lists, alerts, Buyer Intent, Account IQ, Lead IQ, relationship maps, TeamLink, InMail, Smart Links, mobile, Microsoft Teams, reporting, licenses, SSO, SCIM, transfers and privacy. Ground actions in official documentation and observed account access; keep the workflow independent of any business or product.
 ---
 
 # LinkedIn Sales Navigator
 
 Derive the target market, offering and constraints from the current user. Do not carry a previous company's product, contacts or targeting assumptions into a new task.
+
+## Choose the task and required evidence
+
+- **Discover best matches:** Read [the prospecting workflow](references/prospecting-workflow.md) before selecting companies or people. Use Sales Navigator to discover and compare candidates, not merely look up a web-generated list. Keep the [prospecting workbook](assets/prospecting-workbook.md) or equivalent evidence record. Do not call the result qualified until its completion checks pass.
+- **Research supplied targets:** Verify the specified accounts or people and compare relevant stakeholders within that scope. Label this target research; do not claim market-wide discovery. Expand the universe only when the user's request calls for it.
+- **Explain a feature or perform administration:** Follow the relevant reference below; do not run an unrelated prospecting campaign.
+
+Treat documented product behavior, observed account state and agent judgment as different kinds of evidence. LinkedIn documentation does not establish a prospect's need for the user's offering. Never invent a filter, matching score, intent signal or completed action. Reading this skill is not evidence of using its workflow.
 
 ## Retrieve the right reference
 
@@ -23,6 +31,7 @@ Resolve `<skill-directory>` to this installed directory; do not hardcode the ori
 
 | Task | Reference |
 | --- | --- |
+| Discover, compare and rank prospects; prove execution | [Prospecting workflow](references/prospecting-workflow.md) and [workbook](assets/prospecting-workbook.md) |
 | Onboarding, plans, navigation, support | [Fundamentals](references/articles-fundamentals.md) |
 | Search, Boolean, filters, personas, saving, lists, CSV | [Prospecting](references/articles-prospecting.md) |
 | Buyer intent, alerts, AI research, relationship intelligence | [Intelligence](references/articles-intelligence.md) |
@@ -47,14 +56,18 @@ Resolve `<skill-directory>` to this installed directory; do not hardcode the ori
 
 ## Find and qualify prospects
 
-1. Extract ideal companies, buyer roles, location and exclusions from the user's objective. Ask only for consequential missing constraints; otherwise state a reasonable assumption and proceed.
-2. Start with account search for company fit, then lead search for people. Distinguish company headquarters from person location, current from past employer/title, and saved accounts from related people.
-3. Inspect active filter values. A displayed, suggested or pinned filter is not necessarily applied. Do not impose a seniority filter merely because it is visible by default.
-4. Use Boolean syntax only in supported fields. Validate include/exclude logic and any automatic query broadening. Save exact criteria; partition searches beyond display limits and deduplicate overlaps.
-5. Use personas for repeatable buyer criteria, saved searches for changing matches, and entity lists for an explicit working set. Account CSV upload is not lead import or spreadsheet export.
-6. Verify fit from profile/company evidence. Separate facts, AI summaries and inference. An intent score, job change or shared connection is a prioritization signal, not proof of interest or authority.
-7. Use Relationship Explorer, maps, TeamLink and shared experiences to identify a plausible buying group and introduction path. Record uncertainty in inferred roles and relationship strength.
-8. Save or organize the authorized working set and verify results. Return useful qualifications, evidence, exclusions and next actions rather than unfiltered profile dumps.
+Execute the linked workflow, not just this summary. Its comparison method and completion requirements are skill-authored controls, not a LinkedIn scoring system.
+
+1. Define the offering, evidence of a plausible customer need, must-haves, exclusions, geography meaning and requested output. Keep a spending/credit ceiling separate from the desired number of prospects.
+2. Establish current account capabilities. Inspect relevant search and research features; record used, unavailable, not applicable or not checked. Use available alternatives instead of assuming every feature requires an upgrade.
+3. Run native discovery. Choose account-first when company fit drives selection, lead-first when the buyer/network drives it; LinkedIn documents both. Record the actual filters, query, result count, URL and scope inspected. Keep externally supplied seed accounts distinguishable from discovered accounts.
+4. Check active values, Boolean interpretation and automatic broadening. Preserve hard constraints. A pinned control or default persona is not an applied filter or a user preference.
+5. Compare alternatives using business fit plus available relationship and timing evidence. Verify primary-source company facts; do not let a warm connection compensate for a failed must-have. Do not treat search order as a ranking for the user's product.
+6. Compare relevant stakeholders at shortlisted accounts using current role evidence and available Relationship Explorer/lead-page information. Explain the chosen entry contact and any credible alternative. A CEO title alone does not establish the best buyer.
+7. Inspect actual activity and relationship details before personalization. Record absent, unavailable and unchecked signals separately. Do not equate a posting badge with purchase intent or a shared connection with an agreed introduction.
+8. Return a ranked, sourced shortlist, meaningful exclusions, remaining unknowns and a brief execution record. State the reviewed universe and limitations; never claim global optimality. Save or organize the authorized working set, verifying actual state. Do not stop at generic advice when execution is requested.
+
+If native access is blocked, finish independent preparation and report the specific blocker. Label external-only findings provisional; do not represent them as completed Sales Navigator discovery.
 
 ## Research and engage
 
