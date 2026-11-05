@@ -1,0 +1,19 @@
+{
+  "name": "linkedin-sales-navigator",
+  "displayName": "LinkedIn Sales Navigator",
+  "version": "1.0.0",
+  "description": "Independent guide to LinkedIn Sales Navigator: prospecting, lists, messaging, CRM integrations, admin and billing, from paraphrased notes on its help articles. Not affiliated with LinkedIn.",
+  "author": {
+    "name": "Khalid Saidi",
+    "url": "https://github.com/khalidsaidi"
+  },
+  "homepage": "https://github.com/khalidsaidi/skills/tree/main/skills/linkedin-sales-navigator",
+  "repository": "https://github.com/khalidsaidi/skills",
+  "license": "MIT",
+  "keywords": ["linkedin", "sales-navigator", "prospecting", "crm", "sales"],
+  "icon": "./assets/icon.svg",
+  "documentationUrl": "https://github.com/khalidsaidi/skills/tree/main/skills/linkedin-sales-navigator",
+  "supportUrl": "https://github.com/khalidsaidi/skills/issues",
+  "privacyPolicyUrl": "https://github.com/khalidsaidi/skills/blob/main/skills/linkedin-sales-navigator/PRIVACY.md",
+  "termsOfServiceUrl": "https://github.com/khalidsaidi/skills/blob/main/LICENSE"
+}

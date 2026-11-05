@@ -18,6 +18,7 @@ In Claude Code:
 /plugin marketplace add khalidsaidi/skills
 /plugin install knowledge-skills@khalidsaidi-skills
 /plugin install automation-skills@khalidsaidi-skills
+/plugin install linkedin-sales-navigator@khalidsaidi-skills
 ```
 
 With [SkillRunner](https://github.com/khalidsaidi/skillrunner):
