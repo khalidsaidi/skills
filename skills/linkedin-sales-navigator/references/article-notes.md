@@ -19,6 +19,6 @@ Review date: 2026-11-05. The collection contains 421 unique help-article notes. 
 | Privacy | 5 | [Open](articles-privacy.md) |
 | Releases | 24 | [Open](articles-releases.md) |
 
-Use source-index.csv for exact ID/title/source/file mappings. Use scripts/find_reference.py from the skill directory to retrieve complete notes by ID or phrase. Linked implementation documents are indexed separately in implementation-guides.md.
+Use source-index.txt for exact ID/title/source/file mappings. Search the topic files by ID or phrase to retrieve complete notes. Linked implementation documents are indexed separately in implementation-guides.md.
 
 Final topic reconciliation: 36 accessible topic indexes, 356 unique linked article IDs, zero linked article texts missing from this collection. This is bounded index coverage, not a claim that unavailable retired pages or protected images were read.

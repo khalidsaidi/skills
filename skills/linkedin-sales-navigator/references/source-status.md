@@ -68,6 +68,6 @@ Do not automatically equate a 404 with retirement. Sales Assistant retirement is
 
 ## Inventory boundaries
 
-The earlier deduplicated topic inventory contained 352 article IDs; every one remains represented. Final public topic reconciliation checked 36 accessible indexes with 356 unique linked article IDs and found zero missing article texts. This collection also includes independently discovered cross-references, all five articles in the reviewed SCIM topic and all six in the Teams topic, and shared identity/billing dependencies. source-index.csv gives the exact reviewed article count and mapping.
+The earlier deduplicated topic inventory contained 352 article IDs; every one remains represented. Final public topic reconciliation checked 36 accessible indexes with 356 unique linked article IDs and found zero missing article texts. This collection also includes independently discovered cross-references, all five articles in the reviewed SCIM topic and all six in the Teams topic, and shared identity/billing dependencies. source-index.txt gives the exact reviewed article count and mapping.
 
 No current global Help Center export or authoritative fixed total was available. coverage.json therefore keeps the global exhaustive-review flag false. It separately records full text coverage of the enumerated baseline. Never replace this with a fabricated “100% of LinkedIn documentation” claim. Optional training videos, community discussions, release slide decks and unrelated LinkedIn product documentation are not part of the written-help article count.

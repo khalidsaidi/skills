@@ -38,7 +38,7 @@ skill run node-doctor
 
 ## Knowledge skills
 
-Guidance only. These don't run anything in your project, though `linkedin-sales-navigator` includes a small script for searching its notes.
+Guidance only. These don't include scripts.
 
 | Skill | Covers |
 | --- | --- |
