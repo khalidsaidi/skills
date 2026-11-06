@@ -1,3 +1,3 @@
 {
-  "rewrites": [{ "source": "/mcp", "destination": "/api/mcp" }]
+  "rewrites": [{ "source": "/linkedin-sales-navigator/mcp", "destination": "/api/mcp" }]
 }
