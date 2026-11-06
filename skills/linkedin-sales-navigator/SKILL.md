@@ -19,15 +19,7 @@ Treat documented product behavior, observed account state and agent judgment as 
 
 Start with [documentation.md](references/documentation.md) for workflows, [article-notes.md](references/article-notes.md) for the topic map, and [source-status.md](references/source-status.md) for current-versus-historical conflicts and retrieval status. Load only the relevant topic or article sections.
 
-When filesystem execution is available:
-
-```bash
-python3 <skill-directory>/scripts/find_reference.py "SCIM" --limit 6
-python3 <skill-directory>/scripts/find_reference.py "a8006942"
-python3 <skill-directory>/scripts/find_reference.py "InMail credits" --titles-only
-```
-
-Resolve `<skill-directory>` to this installed directory; do not hardcode the originating workspace. Without Python, search the topic files by article ID or title. Read the complete matching note, review status and source link before answering.
+Search the topic files by article ID, title or keywords. Read the complete matching note, review status and source link before answering.
 
 | Task | Reference |
 | --- | --- |
@@ -101,6 +93,6 @@ Finish with observed evidence: saved criteria/list state, correct record match, 
 
 ## Maintain documentation
 
-Use [coverage.json](references/coverage.json) and [source-index.csv](references/source-index.csv) to retain discovered sources, review scope, aliases, replacements and unavailable material. A title, excerpt or landing page is not full review. Read substantive tabs/FAQs; track meaningful diagrams and attachments separately. Resolve missing information with current official replacements without bypassing access controls.
+Use [coverage.json](references/coverage.json) and [source-index.txt](references/source-index.txt) to retain discovered sources, review scope, aliases, replacements and unavailable material. A title, excerpt or landing page is not full review. Read substantive tabs/FAQs; track meaningful diagrams and attachments separately. Resolve missing information with current official replacements without bypassing access controls.
 
 Keep this skill generic. Update the affected note/status and validate the index/lookup. Never inflate coverage with duplicate URLs or mark inaccessible content as read. Do not claim an exhaustive archive unless the enumerated inventory and dependencies support it.

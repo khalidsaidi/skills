@@ -4,11 +4,7 @@ Effective 2026-11-05. This policy covers the `linkedin-sales-navigator` skill, p
 
 ## What the skill collects
 
-Nothing. The skill is a set of instruction and note files with one local search script. It has no servers, analytics, tracking or accounts, and the publisher receives no data from your use of it.
-
-## What the script does
-
-`scripts/find_reference.py` searches the notes bundled with the skill. It runs on your device or in your agent's environment, reads only those files and makes no network requests.
+Nothing. The skill is a set of instruction and note files. It has no servers, analytics, tracking or accounts, and the publisher receives no data from your use of it.
 
 ## Prospect information
 
