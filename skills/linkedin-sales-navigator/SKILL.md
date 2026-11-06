@@ -71,6 +71,8 @@ If native access is blocked, finish independent preparation and report the speci
 
 ## Research and engage
 
+Before sending or editing a message, follow the [message execution checks](references/articles-messaging.md#message-execution-checks) for URL formatting, automatic signatures, persisted edits, individual send confirmation and credit reconciliation.
+
 Read relevant lead/account context and sources behind AI research. Draft around a verified reason to engage using the user's offering and voice. Never invent claims, personalization, results, introductions or contact details.
 
 Select the correct inbox/message type and inspect recipient eligibility, credits, attachment rules and response state. Distinguish invitations, first-degree messages, Open Profile messages and paid InMail. Do not promise bulk InMail, unrestricted invitations or native lead/account CSV export.

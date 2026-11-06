@@ -4,6 +4,7 @@ Reviewed 2026-11-05. Notes are paraphrases. Verify current availability and proc
 
 ## Contents
 
+- [Message execution checks](#message-execution-checks)
 - [a106024 — Admin InMail and messaging controls](#a106024)
 - [a7146366 — AI introduction request](#a7146366)
 - [a108006 — Attachments](#a108006)
@@ -28,6 +29,15 @@ Reviewed 2026-11-05. Notes are paraphrases. Verify current availability and proc
 - [a9527083 — Sales Navigator email destination](#a9527083)
 - [a107018 — Send InMail](#a107018)
 - [a101026 — Sent/pending messages](#a101026)
+
+## Message execution checks
+
+Observed in the desktop Sales Navigator UI on 2026-11-05. These are operational lessons, not additional claims from the help articles below; recheck behavior in the current composer.
+
+1. **Links:** Preserve approved wording and destinations when adapting rich-text drafts to the composer. Prefer standalone URLs on separate lines, without adjacent closing parentheses or sentence punctuation. A sent link was observed to include a trailing parenthesis in its destination. Inspect the rendered link target in the sent message, not just its visible label. Correct a formatting error through the existing message's edit control when available; do not send a duplicate merely to fix a link.
+2. **Signatures:** Inspect the automatically appended signature before sending, including its contribution to the character count. Avoid sending both the draft's sign-off and a duplicate automatic signature. An empty signature was rejected in the observed composer. If an authorized message requires a temporary signature adjustment, retain the original, verify the final combined text, and restore the original afterward. Inspect other persistent composer options before changing them.
+3. **Edits:** Treat text visible in an edit field or a successful Save click as an attempted edit until the conversation shows the new content. An input fill changed the displayed text without updating the form's save state; normal paste/input and leaving the field resolved that instance. Use supported UI input, inspect validation and enabled state, save, then verify the existing message body and link targets. Reopen the conversation if persistence remains uncertain. Do not claim success or resend while the result is ambiguous.
+4. **Send and credit verification:** Recheck recipient, current conversation, free/paid eligibility and available credits before each authorized send. After each send, verify a new outgoing message in that person's thread, with the expected subject/body and an observed sent or awaiting-reply state. A credit decrement alone is not proof of correct delivery. Record each recipient's verified result and route; compare observed starting and ending balances with the verified paid sends, investigating discrepancies without inventing charges or refunds. Sent does not mean read or interested. Inspect the conversation before retrying an ambiguous send to avoid duplicates.
 
 <a id="a106024"></a>
 ## a106024 — Admin InMail and messaging controls
