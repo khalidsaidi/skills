@@ -1,7 +1,7 @@
 {
   "name": "linkedin-sales-navigator",
-  "displayName": "LinkedIn Sales Navigator",
-  "version": "1.0.0",
+  "displayName": "Guide for Sales Navigator",
+  "version": "1.0.1",
   "description": "Independent guide to LinkedIn Sales Navigator: prospecting, lists, messaging, CRM integrations, admin and billing, from paraphrased notes on its help articles. Not affiliated with LinkedIn.",
   "author": {
     "name": "Khalid Saidi",

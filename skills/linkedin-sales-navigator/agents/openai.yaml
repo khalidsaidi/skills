@@ -1,5 +1,5 @@
 interface:
-  display_name: LinkedIn Sales Navigator
+  display_name: Guide for Sales Navigator
   short_description: "Find and compare prospects; manage Sales Navigator"
   default_prompt: "Use $linkedin-sales-navigator to discover and compare suitable prospects using documented features and evidence from my account, or help with administration and integrations."
   icon_small: assets/icon.svg

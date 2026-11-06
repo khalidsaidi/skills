@@ -1,4 +1,4 @@
-# LinkedIn Sales Navigator skill
+# Guide for Sales Navigator
 
 Helps an agent use and explain LinkedIn Sales Navigator: account and lead search, Boolean filters, lists, alerts, InMail, CRM integrations, SSO, licenses, billing and troubleshooting. It works from 421 paraphrased notes on the public Sales Navigator help articles, each linking to its source, dated 2026-11-05.
 
